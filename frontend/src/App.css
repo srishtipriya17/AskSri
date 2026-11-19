@@ -1,0 +1,51 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Theme Variables */
+
+.app.light {
+  --bg-main: #F7F7F5;
+  --bg-sidebar: #EFEFED;
+  --bg-input: #FFFFFF;
+  --bg-hover: #E5E4E1;
+  --text-primary: #292929;
+  --text-secondary: #777777;
+  --border-color: #DDDDDA;
+  --accent: #A78B72;
+  --accent-hover: #92775F;
+}
+
+/* Dark Theme Variables */
+
+.app.dark {
+  --bg-main: #171717;
+  --bg-sidebar: #20201E;
+  --bg-input: #292929;
+  --bg-hover: #353432;
+  --text-primary: #F5F5F5;
+  --text-secondary: #A6A6A6;
+  --border-color: #3A3A38;
+  --accent: #A78B72;
+  --accent-hover: #B69B83;
+}
+
+.main-container {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-main);
+}

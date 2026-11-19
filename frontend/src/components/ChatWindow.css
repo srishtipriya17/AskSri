@@ -1,0 +1,168 @@
+
+.chat-window {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 35px;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+/* Header */
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chat-header h3 {
+  font-size: 19px;
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+.chat-header span {
+  font-size: 12px;
+  padding: 7px 13px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-secondary);
+}
+
+/* Welcome Section */
+
+.welcome-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-icon {
+  font-size: 38px;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.welcome-section h1 {
+  font-size: 30px;
+  font-weight: 650;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.welcome-section > p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 35px;
+}
+
+/* Suggestion Cards */
+
+.suggestion-grid {
+  width: 100%;
+  max-width: 650px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.suggestion-card {
+  text-align: left;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 13px;
+  background-color: var(--bg-input);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.suggestion-card:hover {
+  background-color: var(--bg-hover);
+  transform: translateY(-2px);
+}
+
+.suggestion-card span {
+  font-size: 22px;
+  color: var(--accent);
+}
+
+.suggestion-card h4 {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin: 12px 0 6px;
+}
+
+.suggestion-card p {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* Small Screens */
+
+@media (max-width: 650px) {
+  .chat-window {
+    padding: 18px 15px;
+  }
+
+  .welcome-section h1 {
+    font-size: 23px;
+  }
+
+  .suggestion-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Messages Container */
+.messages-list {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Common Message Style */
+.message {
+  max-width: 75%;
+  padding: 13px 17px;
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+/* User Message */
+.message.user {
+  align-self: flex-end;
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+  border-bottom-right-radius: 4px;
+}
+
+/* Assistant Message */
+.message.assistant {
+  align-self: flex-start;
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-bottom-left-radius: 4px;
+}
+
+
+/* Scrollable Chat Area */
+.welcome-section {
+  overflow-y: auto;
+  min-height: 0;
+}
